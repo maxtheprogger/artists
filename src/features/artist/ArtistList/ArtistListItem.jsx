@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Segment, Icon, Item, List, Button } from 'semantic-ui-react';
+import { Segment, Icon, Item, List, Button, Header } from 'semantic-ui-react';
 import ArtistListDiscography from './ArtistListDiscography';
 
 class ArtistListItem extends Component {
@@ -8,17 +8,26 @@ class ArtistListItem extends Component {
         return (
             <Segment.Group>
                 <Segment>
+                    <Header
+                        content={artist.name}
+                        textAlign="center"
+                        size="huge"
+                    />
+                </Segment>
+                <Segment>
                     <Item.Group>
                         <Item>
                             <Item.Image
                                 src={artist.artistPhotoURL}
-                                float="left"
+                                // float="left"
                                 size="medium"
                             />
                             <Item.Content>
-                                <Item.Header as="a" float="right" size="medium">
-                                    {artist.name}
-                                </Item.Header>
+                                {/* <Header
+                                    as="a"
+                                    textAlign="right"                                    
+                                    content=
+                                /> */}
                             </Item.Content>
                         </Item>
                     </Item.Group>
